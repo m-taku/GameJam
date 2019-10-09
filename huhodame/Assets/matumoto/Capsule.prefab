@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 143569287044513132}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,8 @@ MonoBehaviour:
   speed: 10
   m_evil: 0
   Score: {fileID: 3602005093668203480, guid: 8840c01483150ec409b8f1d106ebda9c, type: 3}
-  naaaa: 0
+  p_Sprite: {fileID: 21300000, guid: 6f1fb4928697de34dad65ed12ae74bb4, type: 3}
+  motimono: 0
 --- !u!143 &143569287044513132
 CharacterController:
   m_ObjectHideFlags: 0

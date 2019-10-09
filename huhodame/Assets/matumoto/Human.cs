@@ -6,25 +6,32 @@ public class Human : MonoBehaviour
 {
     [SerializeField] float speed = 20.0f;
     public bool m_evil = false;
+    public bool m_sensor = false;
     public GameObject Score;
     ScoreManager m_ScoreManager;
     CharacterController m_CharCon;
-    enum MyNo
+    public Sprite p_Sprite;
+    public enum MyNo
     {
-        nasi,
+        dummy_sensor,
+        fork,
+        fry_kaeshi,
+        frying_pan,
         knife,
-        fakeknife,
-        gun,
-        gunfake,
+        nuigurumi,
+        pistol
     };
-    [SerializeField] MyNo naaaa;
+    public MyNo motimono;
     // Start is called before the first frame update
     void Start()
     {
         m_CharCon = this.GetComponent<CharacterController>();
+        int m = (int)MyNo.frying_pan;
+        motimono = (MyNo)Random.Range(0, m);
         m_ScoreManager = Score.GetComponent<ScoreManager>();
         if (m_evil)
         {
+            motimono = MyNo.knife;
             Debug.Log("nuiaefhw");
         }
         m_CharCon = this.GetComponent<CharacterController>();
