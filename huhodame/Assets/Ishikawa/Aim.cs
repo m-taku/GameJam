@@ -11,7 +11,6 @@ public class Aim : MonoBehaviour
     private GameObject[] bullet =new GameObject[3];
     [SerializeField]
     private Transform muzzle;
-    [SerializeField]
     private float bulletPower = 1000.0f;
     private float scroll;
     private int currentNum = 0;
@@ -25,6 +24,7 @@ public class Aim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         scroll = Input.GetAxis("Mouse ScrollWheel");
         
         if (scroll > 0)
@@ -45,16 +45,29 @@ public class Aim : MonoBehaviour
                 currentNum = 0;
             }
         }
-           
+        if(currentNum == 0)
+        {
+            bulletPower = 9000.0f;
+        }
+        else if(currentNum ==1)
+        {
+            bulletPower = 4000.0f;
+        }
+        else if (currentNum == 2)
+        {
+            bulletPower = 9000.0f;
+        }
 
-     
-        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         transform.rotation = Quaternion.LookRotation(ray.direction);
         //マウスの左クリックで撃つ。
         if (Input.GetButtonDown("Fire1"))
         {
-            Shot();
+            if (Input.mousePosition.x > 100.0f&& Input.mousePosition.x< 400.0f
+                &&Input.mousePosition.y >  50.0f&& Input.mousePosition.y < 220.0f)
+            {
+                Shot();
+            }
         }
         Ray ray1 = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit1;
@@ -71,6 +84,5 @@ public class Aim : MonoBehaviour
     {
         var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
         bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
-        Destroy(bulletInstance, 5f);
     }
 }
