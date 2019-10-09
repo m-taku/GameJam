@@ -24,6 +24,8 @@ public class Explosition : MonoBehaviour
             transform.position.y,
             transform.position.z),
            Quaternion.identity);
+        explosion.GetComponent<CapsuleCollider>().enabled = true;
+        
         Destroy(this.gameObject);
     }
 }

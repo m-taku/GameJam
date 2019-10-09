@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a101be7b86c6cc4eaec1f5d70e71b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 10
   m_evil: 0
   Score: {fileID: 3602005093668203480, guid: 8840c01483150ec409b8f1d106ebda9c, type: 3}
   naaaa: 0

@@ -14,6 +14,7 @@ public class Aim : MonoBehaviour
     private float bulletPower = 1000.0f;
     private float scroll;
     private int currentNum = 0;
+    private float interVal = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class Aim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        interVal += Time.deltaTime;
         scroll = Input.GetAxis("Mouse ScrollWheel");
         
         if (scroll > 0)
@@ -82,7 +83,12 @@ public class Aim : MonoBehaviour
     }
     void Shot()
     {
-        var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
-        bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+        if(interVal >= 0.5f)
+        {
+            interVal = 0.0f;
+            var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
+            bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+        }
+        
     }
 }
