@@ -20,8 +20,8 @@ public class SpoonHuman : MonoBehaviour
             var na = Random.Range(0,Human.Length); 
             i = 0;
             //Debug.Log(transform.rotation);
-            var sa =  Random.Range(-100, 100);
-            var pos = new Vector3(transform.position.x + sa, transform.position.y, transform.position.z);
+            var sa =  Random.Range(-200, 200);
+            var pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + sa);
             var n = Instantiate(Human[na], pos, transform.rotation);
             if (20 >= Random.Range(0, 100))
             {
