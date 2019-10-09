@@ -175,7 +175,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 //戻ります
@@ -208,7 +211,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 //戻ります
@@ -241,7 +247,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 //戻ります
@@ -274,7 +283,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 //戻ります
@@ -308,7 +320,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.1f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 //戻ります
@@ -345,7 +360,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.1f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 //戻ります
@@ -376,7 +394,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 if (Timer > 115 && Timer <= 125)
@@ -388,7 +409,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 if (Timer > 125 && Timer <= 135)
@@ -400,7 +424,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 break;
@@ -416,7 +443,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 if (Timer > 135 && Timer <= 145)
@@ -428,7 +458,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 if (Timer > 145 && Timer <= 155)
@@ -448,7 +481,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 break;
@@ -470,7 +506,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 //戻ります
@@ -500,7 +539,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 if (Timer > 145 && Timer <= 155)
@@ -511,7 +553,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 if (Timer > 155 && Timer <= 165)
@@ -530,7 +575,10 @@ public class Title_Move : MonoBehaviour
                     //不透明度！
                     Vector4 sp_color = this.GetComponent<Image>().color;
                     sp_color.w += 0.05f;
-                    Mathf.Max(sp_color.w, 1.0f);
+                    if (sp_color.w > 1.0f)
+                    {
+                        sp_color.w = 1.0f;
+                    }
                     this.GetComponent<Image>().color = sp_color;
                 }
                 break;
