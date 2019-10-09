@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4649390409953936012}
   - component: {fileID: 2105880964291541681}
   - component: {fileID: 7691773278001343994}
-  - component: {fileID: 143326671322372272}
+  - component: {fileID: 143569287044513132}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5229994369134051991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 167.29492, y: 84.433136, z: -160.92749}
-  m_LocalScale: {x: 10, y: 10, z: 3}
+  m_LocalScale: {x: 10, y: 10, z: 3.1464}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -91,10 +91,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a101be7b86c6cc4eaec1f5d70e71b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  m_Illegal_entry: 0
+  speed: 100
+  m_evil: 0
+  Score: {fileID: 3602005093668203480, guid: 8840c01483150ec409b8f1d106ebda9c, type: 3}
   naaaa: 0
---- !u!143 &143326671322372272
+--- !u!143 &143569287044513132
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

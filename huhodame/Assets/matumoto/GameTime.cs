@@ -5,6 +5,13 @@ using UnityEngine;
 public class GameTime : MonoBehaviour
 {
     public float m_GameTime = 0.0f;
+    public enum day
+    {
+        Morning,
+        Noon,
+        Night
+    }
+    public day m_Day;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +22,13 @@ public class GameTime : MonoBehaviour
     void Update()
     {
         m_GameTime += Time.deltaTime;
+        if ((m_GameTime/60)- (int)m_Day >=1)
+        {
+            if (m_Day != day.Night)
+            {
+                m_Day++;
+            }
+        }
+        Debug.Log(m_Day);
     }
 }
