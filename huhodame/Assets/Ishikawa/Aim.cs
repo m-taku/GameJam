@@ -12,7 +12,7 @@ public class Aim : MonoBehaviour
     [SerializeField]
     private Transform muzzle;
     [SerializeField]
-    private float bulletPower = 500.0f;
+    private float bulletPower = 1000.0f;
     private float scroll;
     private int currentNum = 0;
     // Start is called before the first frame update
