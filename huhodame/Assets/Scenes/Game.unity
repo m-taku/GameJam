@@ -797,6 +797,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 207893486863061287, guid: 5705d74c0734d7a4481e836bcc89196c,
+        type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 1532039422}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5705d74c0734d7a4481e836bcc89196c, type: 3}
 --- !u!1 &483815038
@@ -811,7 +816,7 @@ GameObject:
   - component: {fileID: 483815039}
   m_Layer: 0
   m_Name: endpoint
-  m_TagString: Untagged
+  m_TagString: end point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1485,7 +1490,7 @@ BoxCollider:
   m_GameObject: {fileID: 954711316}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2318,7 +2323,7 @@ GameObject:
   - component: {fileID: 1411272789}
   m_Layer: 0
   m_Name: endpoint (1)
-  m_TagString: Untagged
+  m_TagString: end point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2481,7 +2486,7 @@ BoxCollider:
   m_GameObject: {fileID: 1486309903}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2616,6 +2621,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491650414}
   m_CullTransparentMesh: 0
+--- !u!1 &1532039422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532039425}
+  - component: {fileID: 1532039424}
+  - component: {fileID: 1532039423}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1532039423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532039422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815e80eda2b4d22429f8c3c9d81b6231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1532039424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532039422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba26bad0353c4746b6b2aca3ded0b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_GameTime: 0
+  m_Day: 0
+--- !u!4 &1532039425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532039422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.727821, y: 10.023024, z: 12.893151}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1672510634
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,7 +2823,7 @@ BoxCollider:
   m_GameObject: {fileID: 1724101250}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2851,7 +2914,7 @@ BoxCollider:
   m_GameObject: {fileID: 1734610756}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2981,6 +3044,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 207893486863061287, guid: 5705d74c0734d7a4481e836bcc89196c,
+        type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 1532039422}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5705d74c0734d7a4481e836bcc89196c, type: 3}
 --- !u!4 &1875339496 stripped

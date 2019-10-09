@@ -38,11 +38,17 @@ public class Human : MonoBehaviour
     }
     void OnTriggerEnter(Collider t)
     {
+       
         if (t.gameObject.tag == "end point")
         {
             //ここでスコアを減算する
             m_ScoreManager.Escape(m_evil);
             Destroy(this.transform.gameObject);   
+        }
+        if(t.gameObject.tag == "Bullet")
+        {
+            Debug.Log("aaaaaa");
+            Destroy(this.transform.gameObject);
         }
     }
 }
