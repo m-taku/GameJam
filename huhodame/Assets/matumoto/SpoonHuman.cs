@@ -12,7 +12,6 @@ public class SpoonHuman : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(Score);
         m_Time = Score.GetComponent<GameTime>();
     }
 
@@ -57,7 +56,6 @@ public class SpoonHuman : MonoBehaviour
         var sa = Random.Range(-250, 250);
         var pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + sa);
         var n = Instantiate(Human[na], pos, transform.rotation);
-        n.GetComponent<Human>().Score = Score;
         return n.GetComponent<Human>();
         //if (20 >= Random.Range(0, 100))
         //{

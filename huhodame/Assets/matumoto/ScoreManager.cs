@@ -5,24 +5,23 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
 
-    int death_normalHuman = 0;
-    int death_evilHuman = 0;
-    int BonusHuman = 0;             //?
-    int Escape_evilHuman = 0;
+    static int death_normalHuman = 0;           //善人を倒してしまった数
+    static int death_evilHuman = 0;             //悪人を倒した数
+    static int Escape_evilHuman = 0;            //通してしまった悪人の数
     // Start is called before the first frame update
-    void Start()
+    public static int getdeath_normalHuman()
     {
-        death_normalHuman = 0;
-        death_evilHuman = 0;
-        BonusHuman = 0;
-        Escape_evilHuman = 0;
-        Debug.Log(Escape_evilHuman);
+        return death_normalHuman;
     }
-    private void Update()
+    public static int getdeath_evilHuman()
     {
-
+        return death_evilHuman;
     }
-    public void AddScore(bool furagu)
+    public static int getEscape_evilHuman()
+    {
+        return Escape_evilHuman;
+    }
+    public static void AddScore(bool furagu)
     {
         if(furagu)
         {
@@ -33,16 +32,17 @@ public class ScoreManager : MonoBehaviour
             death_normalHuman++;
         }
     }
-    public void AddBonusScore()
-    {
-        BonusHuman++;
-    }
-    public void Escape(bool furagu)
+    public static void Escape(bool furagu)
     {
         if (furagu)
         {
-
-            Escape_evilHuman += 1;
+            Escape_evilHuman++;
         }
+    }
+    public static void reset()
+    {
+        death_normalHuman = 0;           //善人を倒してしまった数
+        death_evilHuman = 0;             //悪人を倒した数
+       Escape_evilHuman = 0;            //通してしまった悪人の数
     }
 }

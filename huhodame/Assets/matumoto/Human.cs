@@ -7,8 +7,6 @@ public class Human : MonoBehaviour
     [SerializeField] float speed = 20.0f;
     public bool m_evil = false;
     public bool m_sensor = false;
-    public GameObject Score;
-    ScoreManager m_ScoreManager;
     CharacterController m_CharCon;
     public Sprite p_Sprite;
     public enum MyNo
@@ -28,7 +26,6 @@ public class Human : MonoBehaviour
         m_CharCon = this.GetComponent<CharacterController>();
         int m = (int)MyNo.frying_pan;
         motimono = (MyNo)Random.Range(0, m);
-        m_ScoreManager = Score.GetComponent<ScoreManager>();
         if (m_evil)
         {
             motimono = MyNo.knife;
@@ -49,7 +46,9 @@ public class Human : MonoBehaviour
         if (t.gameObject.tag == "end point")
         {
             //ここでスコアを減算する
-            m_ScoreManager.Escape(m_evil);
+            ScoreManager.Escape(m_evil);
+            Debug.Log(m_evil);
+            Debug.Log(ScoreManager.getEscape_evilHuman());
             Destroy(this.transform.gameObject);   
         }
         if(t.gameObject.tag == "Bullet")

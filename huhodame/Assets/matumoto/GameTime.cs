@@ -15,6 +15,7 @@ public class GameTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ScoreManager.reset();
         m_GameTime = 0.0f;
     }
 
