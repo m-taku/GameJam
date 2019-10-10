@@ -94,11 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: 6a556b6cacbee6b46bf746aa24628aff, type: 3}
   bullet:
-  - {fileID: 7393848172219378752, guid: 2c6501c1ab0a7454fa43170ccdd98abc, type: 3}
+  - {fileID: 5451887635836945527, guid: fa3748ca7768bfc4181e8d5adc547337, type: 3}
   - {fileID: 115386, guid: 1d37014fd411c524db3696bba6ff1d21, type: 3}
-  - {fileID: 299288448300084728, guid: b4740260661fc8c458de56ec52116fec, type: 3}
+  - {fileID: 7090516802065617900, guid: b1120f4fee3275a4281d6253eb9fe1aa, type: 3}
   muzzle: {fileID: 726772912233655588}
-  bulletPower: 1000
 --- !u!1 &725991733536032295
 GameObject:
   m_ObjectHideFlags: 0

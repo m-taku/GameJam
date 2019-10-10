@@ -48,15 +48,15 @@ public class Aim : MonoBehaviour
         }
         if(currentNum == 0)
         {
-            bulletPower = 9000.0f;
+            bulletPower = 27000.0f;
         }
         else if(currentNum ==1)
         {
-            bulletPower = 4000.0f;
+            bulletPower = 9000.0f;
         }
         else if (currentNum == 2)
         {
-            bulletPower = 9000.0f;
+            bulletPower = 17000.0f;
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
