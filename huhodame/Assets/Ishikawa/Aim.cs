@@ -64,11 +64,11 @@ public class Aim : MonoBehaviour
         //マウスの左クリックで撃つ。
         if (Input.GetButtonDown("Fire1"))
         {
-            if (Input.mousePosition.x > 100.0f&& Input.mousePosition.x< 400.0f
-                &&Input.mousePosition.y >  50.0f&& Input.mousePosition.y < 220.0f)
-            {
+            //if (Input.mousePosition.x > 100.0f&& Input.mousePosition.x< 400.0f
+            //    &&Input.mousePosition.y >  50.0f&& Input.mousePosition.y < 220.0f)
+            //{
                 Shot();
-            }
+            //}
         }
         Ray ray1 = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit1;
