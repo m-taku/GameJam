@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Human : MonoBehaviour
 {
     [SerializeField] float speed = 20.0f;
@@ -32,6 +31,7 @@ public class Human : MonoBehaviour
             Debug.Log("nuiaefhw");
         }
         m_CharCon = this.GetComponent<CharacterController>();
+        
     }
 
     // Update is called once per frame
@@ -53,7 +53,8 @@ public class Human : MonoBehaviour
         }
         if(t.gameObject.tag == "Bullet")
         {
-            Debug.Log("aaaaaa");
+            //Debug.Log("aaaaaa");
+            ScoreManager.AddScore(m_evil);
             Destroy(this.transform.gameObject);
         }
     }

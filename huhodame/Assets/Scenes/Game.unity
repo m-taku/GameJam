@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4497882, g: 0.4998576, b: 0.57561004, a: 1}
+  m_IndirectSpecularColor: {r: 0.44978762, g: 0.49985653, b: 0.5756081, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1084,6 +1084,7 @@ MonoBehaviour:
   m_Battery:
   - {fileID: 347109289}
   - {fileID: 1424234374}
+  dollarText: {fileID: 1083838804}
 --- !u!1 &541621807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,12 +1992,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 726772911699645562, guid: a8acd3eb88ba45c449ea97ffab77783b,
-        type: 3}
-      propertyPath: bullet.Array.data[1]
-      value: 
-      objectReference: {fileID: 318949213340055616, guid: df134323ed8beda4eae82b68056d4cfc,
-        type: 3}
     - target: {fileID: 726772912233655588, guid: a8acd3eb88ba45c449ea97ffab77783b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2007,6 +2002,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.983
       objectReference: {fileID: 0}
+    - target: {fileID: 726772911699645562, guid: a8acd3eb88ba45c449ea97ffab77783b,
+        type: 3}
+      propertyPath: bullet.Array.data[1]
+      value: 
+      objectReference: {fileID: 318949213340055616, guid: df134323ed8beda4eae82b68056d4cfc,
+        type: 3}
     - target: {fileID: 726772912233655611, guid: a8acd3eb88ba45c449ea97ffab77783b,
         type: 3}
       propertyPath: m_Name
@@ -2386,17 +2387,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 726772912233655588, guid: a8acd3eb88ba45c449ea97ffab77783b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.372
+      objectReference: {fileID: 0}
     - target: {fileID: 726772911699645562, guid: a8acd3eb88ba45c449ea97ffab77783b,
         type: 3}
       propertyPath: bullet.Array.data[1]
       value: 
       objectReference: {fileID: 318949213340055616, guid: df134323ed8beda4eae82b68056d4cfc,
         type: 3}
-    - target: {fileID: 726772912233655588, guid: a8acd3eb88ba45c449ea97ffab77783b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.372
-      objectReference: {fileID: 0}
     - target: {fileID: 726772912233655611, guid: a8acd3eb88ba45c449ea97ffab77783b,
         type: 3}
       propertyPath: m_Name
