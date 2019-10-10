@@ -572,7 +572,7 @@ PrefabInstance:
     - target: {fileID: 207893486863061287, guid: 5705d74c0734d7a4481e836bcc89196c,
         type: 3}
       propertyPath: Human.Array.size
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 207893486863061287, guid: 5705d74c0734d7a4481e836bcc89196c,
         type: 3}
@@ -756,7 +756,7 @@ PrefabInstance:
     - target: {fileID: 207893486863061287, guid: 5705d74c0734d7a4481e836bcc89196c,
         type: 3}
       propertyPath: Human.Array.size
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 207893486863061287, guid: 5705d74c0734d7a4481e836bcc89196c,
         type: 3}
@@ -899,6 +899,7 @@ MonoBehaviour:
   m_Battery:
   - {fileID: 1715430267}
   - {fileID: 1283906763}
+  dollarText: {fileID: 0}
 --- !u!1 &1269478704
 GameObject:
   m_ObjectHideFlags: 0

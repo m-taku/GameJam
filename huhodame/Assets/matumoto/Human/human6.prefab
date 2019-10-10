@@ -541,7 +541,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0b225c038e4180648bfc6fc53e08d86c, type: 3}
+  - {fileID: 2100000, guid: 5144f576e3289724b867e416ed1f8fa0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2367,7 +2367,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &114334537957811884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2381,8 +2381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  m_evil: 0
-  m_sensor: 0
+  m_Material: {fileID: 2100000, guid: 30166ce3910f3ba44888c704f302e79a, type: 2}
+  m_obj: {fileID: 6442862706106545905}
   p_Sprite: {fileID: 21300000, guid: 8248458563de670409ad705f008be90e, type: 3}
   motimono: 0
 --- !u!1 &6442862706106546047
