@@ -43,7 +43,7 @@ public class Aim : MonoBehaviour
             currentNum--;
             if (currentNum < 0)
             {
-                currentNum = 0;
+                currentNum = 2;
             }
         }
         if(currentNum == 0)
@@ -90,5 +90,11 @@ public class Aim : MonoBehaviour
             bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
         }
         
+    }
+
+    //現在の武器Noを返す
+    public int GetCurrentNum()
+    {
+        return currentNum;
     }
 }
