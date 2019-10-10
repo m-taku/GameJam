@@ -50,4 +50,9 @@ public class CamerMove : MonoBehaviour
     {
         return dollar;
     }
+    //砲台Noを返す
+    public int NowHoudai()
+    {
+        return no;
+    }
 }
