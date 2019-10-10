@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class Sensor : MonoBehaviour
 {
     [SerializeField] GameObject[] m_Imageobj = new GameObject[2];
+    [SerializeField] KeyCode m_key;
     Image[] m_Image = new Image[2];
+    GameObject m_Human;
+    Human m_human = null;
     public Sprite[] sprite;
     private void Start()
     {
@@ -20,14 +23,15 @@ public class Sensor : MonoBehaviour
 
         if (t.gameObject.tag == "Player")
         {
-            var na = t.gameObject.GetComponent<Human>();
-            if (na.m_sensor ==false)
+            m_human = t.gameObject.GetComponent<Human>();
+            m_Human = m_human.getobj();
+            if (m_human.getsensor() ==false)
             {
                 Debug.Log("発見！！！");
 
-                m_Image[0].sprite = sprite[(int)na.motimono];
-                m_Image[1].sprite = na.p_Sprite;
-                na.m_sensor = true;
+                m_Image[0].sprite = sprite[(int)m_human.motimono];
+                m_Image[1].sprite = m_human.p_Sprite;
+                m_human.setsensor(true);
             }
         }
     }
@@ -45,14 +49,16 @@ public class Sensor : MonoBehaviour
     //    m_Image = GetComponent<Image>();
     //}
 
-    //void Update()
-    //{
-    //    //Press space to change the Sprite of the Image
-    //    if (Input.GetKey(KeyCode.Space))
-    //    {
-    //        m_Image.sprite = m_Sprite;
-    //    }
-    //}
+    void Update()
+    {
+        if (Input.GetKey(m_key)){
+            if (m_human != null)
+            {
+                m_Human.GetComponent<Renderer>().material = m_human.getmaterial();
+            }
+        }
+        //Press space to change the Sprite of the Image
+    }
 
 
 

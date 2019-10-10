@@ -4,8 +4,10 @@ using UnityEngine;
 public class Human : MonoBehaviour
 {
     [SerializeField] float speed = 20.0f;
-    public bool m_evil = false;
-    public bool m_sensor = false;
+    bool m_evil = false;
+    bool m_sensor = false;
+    [SerializeField] Material m_Material;
+    [SerializeField] GameObject m_obj;
     CharacterController m_CharCon;
     public Sprite p_Sprite;
     public enum MyNo
@@ -18,6 +20,30 @@ public class Human : MonoBehaviour
         nuigurumi,
         pistol
     };
+    public Material getmaterial()
+    {
+        return m_Material;
+    }
+    public GameObject getobj()
+    {
+        return m_obj;
+    }
+    public bool getevil()
+    {
+        return m_evil;
+    }
+    public void setevil(bool frag)
+    {
+        m_evil = frag;
+    }
+    public bool getsensor()
+    {
+        return m_sensor;
+    }
+    public void setsensor(bool frag)
+    {
+        m_sensor = frag;
+    }
     public MyNo motimono;
     // Start is called before the first frame update
     void Start()
@@ -37,8 +63,9 @@ public class Human : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_CharCon.Move(transform.forward * speed * Time.deltaTime);
-        //transform.position += transform.forward * speed * Time.deltaTime;
+        var moveSpeed = transform.forward;
+        moveSpeed.y -= 0.5f;
+        m_CharCon.Move(moveSpeed * speed * Time.deltaTime);
     }
     void OnTriggerEnter(Collider t)
     {
@@ -47,13 +74,10 @@ public class Human : MonoBehaviour
         {
             //ここでスコアを減算する
             ScoreManager.Escape(m_evil);
-            Debug.Log(m_evil);
-            Debug.Log(ScoreManager.getEscape_evilHuman());
             Destroy(this.transform.gameObject);   
         }
         if(t.gameObject.tag == "Bullet")
         {
-            //Debug.Log("aaaaaa");
             ScoreManager.AddScore(m_evil);
             Destroy(this.transform.gameObject);
         }

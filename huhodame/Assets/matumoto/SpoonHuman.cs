@@ -45,7 +45,7 @@ public class SpoonHuman : MonoBehaviour
             }
             if (evilratio >= Random.Range(0, 100))
             {
-                obj.m_evil = true;
+                obj.setevil(true);
             }
             count++;
         }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScenes : MonoBehaviour
 {
     bool m_scene = false;
-    [SerializeField] int No;
+    [SerializeField] int No = 0;
     private void Update()
     {
         if (m_scene)
