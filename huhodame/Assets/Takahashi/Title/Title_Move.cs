@@ -24,7 +24,7 @@ public class Title_Move : MonoBehaviour
         Mozi_tai_hund,
     }
     public Mozi_syurui Mozi_Syurui;
-    int Timer;
+    int Timer = 0;
     Vector3 DefPos; //保存されるデフォルトポジション
     Vector3 StartPos; //初期座標を入れる
     Vector3 GoalPos; //終点座標を入れる
