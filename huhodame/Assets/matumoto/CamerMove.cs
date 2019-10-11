@@ -7,7 +7,7 @@ public class CamerMove : MonoBehaviour
     [SerializeField] GameObject[] m_Battery = new GameObject[2];
     int no = 0;
     public Text dollarText;
-    private int dollar = 0;
+    private int dollar = 2000;
     private int countevil = 0;
     private int count = 0;
 
@@ -69,6 +69,7 @@ public class CamerMove : MonoBehaviour
     public void PlusMoney(int money)
     {
         dollar -= money;
+        dollarText.text = dollar.ToString() + "＄";
     }
     //砲台Noを返す
     public int NowHoudai()

@@ -98,9 +98,9 @@ public class Aim : MonoBehaviour
                 var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
                 bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
             }
-            if (currentNum==2 && m_Camera.GetComponent<CamerMove>().NowMoney() >= 500)
+            if (currentNum==2 && m_Camera.GetComponent<CamerMove>().NowMoney() >= 500/2)
             {
-                m_Camera.GetComponent<CamerMove>().PlusMoney(500);
+                m_Camera.GetComponent<CamerMove>().PlusMoney(500/2);
 
                 sound[currentNum].Play();
                 interVal = 0.0f;
@@ -108,9 +108,9 @@ public class Aim : MonoBehaviour
                 bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
 
             }
-            if (currentNum == 1 && m_Camera.GetComponent<CamerMove>().NowMoney() >= 2000)
+            if (currentNum == 1 && m_Camera.GetComponent<CamerMove>().NowMoney() >= 2000/2)
             {
-                m_Camera.GetComponent<CamerMove>().PlusMoney(2000);
+                m_Camera.GetComponent<CamerMove>().PlusMoney(2000/2);
 
                 sound[currentNum].Play();
                 interVal = 0.0f;
