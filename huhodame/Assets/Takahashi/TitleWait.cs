@@ -7,7 +7,7 @@ public class TitleWait : MonoBehaviour
 {
     public float timeOut; //時間のボーダー
     private float timeElapsed;
-
+    [SerializeField] GameObject Gamemanager;
     GameObject Logo = null;
     int Timer = 0;
 
@@ -48,8 +48,12 @@ public class TitleWait : MonoBehaviour
                     col.w = 0.0f;
                 }
                 Logo.GetComponent<Image>().color = col;
-            }
 
+            }
+           else if(Timer>=180)
+            {
+                Gamemanager.GetComponent<GAme>().furag = true;
+            }
             Timer++;
 
             timeElapsed = 0.0f;
