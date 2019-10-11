@@ -51,6 +51,14 @@ public class ResultEffect : MonoBehaviour
     GameObject Score = null;
     GameObject Score2 = null;
 
+    //効果音設定
+    private AudioSource audioSource;
+    public AudioClip SE_Ka; //ｶｯ
+    public AudioClip SE_Kiran; //キラリン
+    public AudioClip SE_Dodon; //ドドン
+    public AudioClip SE_Drum; //ドドン
+    public AudioClip BGM_Result;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +66,7 @@ public class ResultEffect : MonoBehaviour
         Dead_Akunin_Nom = ScoreManager.getdeath_evilHuman();
         Alive_Akunin_Nom = ScoreManager.getEscape_evilHuman();
         Dead_Zennin_Nom = ScoreManager.getdeath_normalHuman();
+        audioSource = gameObject.GetComponent<AudioSource>();
 
         //画像のスタンバーイ
         Fade = GameObject.Find("Fade");
@@ -242,9 +251,14 @@ public class ResultEffect : MonoBehaviour
                         sp_color.w = 1.0f;
                         Text1_.GetComponent<Text>().color = sp_color;
                         Text1_.GetComponent<Text>().text = "+" + Dead_Akunin_Score;
+                        audioSource.PlayOneShot(SE_Kiran);
 
                         Hyouzi = Dead_Akunin_Nom;
                         SaiseiFlag1 = true;
+                    }
+                    else
+                    {
+                        audioSource.PlayOneShot(SE_Ka);
                     }
                 }
             }
@@ -285,9 +299,14 @@ public class ResultEffect : MonoBehaviour
                         sp_color.w = 1.0f;
                         Text2_.GetComponent<Text>().color = sp_color;
                         Text2_.GetComponent<Text>().text = "-" + Alive_Akunin_Score;
+                        audioSource.PlayOneShot(SE_Kiran);
 
                         Hyouzi = Alive_Akunin_Nom;
                         SaiseiFlag2 = true;
+                    }
+                    else
+                    {
+                        audioSource.PlayOneShot(SE_Ka);
                     }
                 }
             }
@@ -331,7 +350,12 @@ public class ResultEffect : MonoBehaviour
 
                         Hyouzi = Dead_Zennin_Nom;
                         SaiseiFlag3 = true;
+                        audioSource.PlayOneShot(SE_Kiran);
                         Timer = 0;
+                    }
+                    else
+                    {
+                        audioSource.PlayOneShot(SE_Ka);
                     }
                 }
             }
@@ -341,6 +365,10 @@ public class ResultEffect : MonoBehaviour
         //最終スコア表示
         if(SaiseiFlag3 == true)
         {
+            if (Timer == 20)
+            {
+                audioSource.PlayOneShot(SE_Drum);
+            }
             //ライン移動
             if (Timer >= 30 && Timer < 70)
             {
@@ -383,6 +411,8 @@ public class ResultEffect : MonoBehaviour
                 Vector4 sp_color = Score2.GetComponent<Text>().color;
                 sp_color.w = 0.5f;
                 Score2.GetComponent<Text>().color = sp_color;
+                audioSource.PlayOneShot(SE_Dodon);
+                audioSource.PlayOneShot(SE_Dodon);
             }
 
             if (Timer >= 150 && Timer < 160)

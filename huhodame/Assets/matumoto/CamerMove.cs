@@ -44,4 +44,15 @@ public class CamerMove : MonoBehaviour
 
 
     }
+
+    //所持金を返す
+    public int NowMoney()
+    {
+        return dollar;
+    }
+    //砲台Noを返す
+    public int NowHoudai()
+    {
+        return no;
+    }
 }

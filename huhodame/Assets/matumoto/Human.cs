@@ -72,7 +72,7 @@ public class Human : MonoBehaviour
 
         if (m_moveSpeed.y >= -10.0f)
         {
-            m_moveSpeed.y -= 0.5f;
+            m_moveSpeed.y -= 1.0f;
         }
         if(!m_ded)
         {
