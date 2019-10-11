@@ -66,9 +66,6 @@ public class ResultEffect : MonoBehaviour
         Dead_Akunin_Nom = ScoreManager.getdeath_evilHuman();
         Alive_Akunin_Nom = ScoreManager.getEscape_evilHuman();
         Dead_Zennin_Nom = ScoreManager.getdeath_normalHuman();
-        Dead_Akunin_Nom = 346;
-        Alive_Akunin_Nom = 50;
-        Dead_Zennin_Nom = 120;
         audioSource = gameObject.GetComponent<AudioSource>();
 
         //画像のスタンバーイ
