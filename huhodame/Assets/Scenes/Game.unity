@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44978762, g: 0.49985653, b: 0.5756081, a: 1}
+  m_IndirectSpecularColor: {r: 0.44970965, g: 0.49977827, b: 0.5756337, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -619,7 +619,7 @@ Light:
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 90
 --- !u!4 &170076735
 Transform:
   m_ObjectHideFlags: 0
@@ -627,13 +627,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
-  m_LocalRotation: {x: 0.64003813, y: -0.30058485, z: -0.3005849, w: 0.64003813}
-  m_LocalPosition: {x: 784.8, y: 318, z: 0}
+  m_LocalRotation: {x: 0.6408564, y: -0.29883623, z: -0.29883623, w: 0.6408564}
+  m_LocalPosition: {x: 639, y: 318, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 140.313, y: 89.99999, z: 89.99999}
+  m_LocalEulerAnglesHint: {x: 140, y: 90, z: 90}
 --- !u!1 &254677159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1312,10 @@ MonoBehaviour:
   - {fileID: 347109289}
   - {fileID: 1424234374}
   dollarText: {fileID: 1083838804}
+  A_Gate1: {fileID: 1724101250}
+  A_Gate2: {fileID: 1486309903}
+  B_Gate1: {fileID: 954711316}
+  B_Gate2: {fileID: 1734610756}
 --- !u!1 &541621807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,6 +2050,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c6b00ecb32caf3c4488e3e904d2788bf, type: 3}
   - {fileID: 21300000, guid: 3adab7ac6ba493e4d825e36421d4eca1, type: 3}
   - {fileID: 21300000, guid: 5c842f0479d863b45a1a1e4b562a4259, type: 3}
+  NoCheckSprite: {fileID: 21300000, guid: 154e9bac8ad4d394c85d3b14d1acb731, type: 3}
+  CheckSprite: {fileID: 21300000, guid: 31ae1e99c10f6504e846776621d56be8, type: 3}
 --- !u!1 &959706347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,6 +3167,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c6b00ecb32caf3c4488e3e904d2788bf, type: 3}
   - {fileID: 21300000, guid: 3adab7ac6ba493e4d825e36421d4eca1, type: 3}
   - {fileID: 21300000, guid: 5c842f0479d863b45a1a1e4b562a4259, type: 3}
+  NoCheckSprite: {fileID: 21300000, guid: 154e9bac8ad4d394c85d3b14d1acb731, type: 3}
+  CheckSprite: {fileID: 21300000, guid: 31ae1e99c10f6504e846776621d56be8, type: 3}
 --- !u!1 &1491650414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,6 +3636,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c6b00ecb32caf3c4488e3e904d2788bf, type: 3}
   - {fileID: 21300000, guid: 3adab7ac6ba493e4d825e36421d4eca1, type: 3}
   - {fileID: 21300000, guid: 5c842f0479d863b45a1a1e4b562a4259, type: 3}
+  NoCheckSprite: {fileID: 21300000, guid: 154e9bac8ad4d394c85d3b14d1acb731, type: 3}
+  CheckSprite: {fileID: 21300000, guid: 31ae1e99c10f6504e846776621d56be8, type: 3}
 --- !u!1 &1734610756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,6 +3755,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c6b00ecb32caf3c4488e3e904d2788bf, type: 3}
   - {fileID: 21300000, guid: 3adab7ac6ba493e4d825e36421d4eca1, type: 3}
   - {fileID: 21300000, guid: 5c842f0479d863b45a1a1e4b562a4259, type: 3}
+  NoCheckSprite: {fileID: 21300000, guid: 154e9bac8ad4d394c85d3b14d1acb731, type: 3}
+  CheckSprite: {fileID: 21300000, guid: 31ae1e99c10f6504e846776621d56be8, type: 3}
 --- !u!1 &1789278752
 GameObject:
   m_ObjectHideFlags: 0
