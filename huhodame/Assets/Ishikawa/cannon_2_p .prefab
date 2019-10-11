@@ -189,7 +189,7 @@ MonoBehaviour:
   cursor: {fileID: 2800000, guid: 6a556b6cacbee6b46bf746aa24628aff, type: 3}
   bullet:
   - {fileID: 5451887635836945527, guid: fa3748ca7768bfc4181e8d5adc547337, type: 3}
-  - {fileID: 115386, guid: 1d37014fd411c524db3696bba6ff1d21, type: 3}
+  - {fileID: 318949213340055616, guid: df134323ed8beda4eae82b68056d4cfc, type: 3}
   - {fileID: 7090516802065617900, guid: b1120f4fee3275a4281d6253eb9fe1aa, type: 3}
   muzzle: {fileID: 175875805529951014}
 --- !u!82 &668128903112875822
