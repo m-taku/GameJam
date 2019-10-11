@@ -19,7 +19,7 @@ public class Life : MonoBehaviour
     {
        
         interval += Time.deltaTime;
-        if (interval >= 0.8f)
+        if (interval >= 1.2f)
         {
             
             interval = 0.0f;
