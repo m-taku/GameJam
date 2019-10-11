@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -621,6 +621,7 @@ MonoBehaviour:
   Dead_Akunin_ScoreHosei: 2
   Alive_Akunin_ScoreHosei: 0.5
   Dead_Zennin_ScoreHosei: 0.5
+  GameManager: {fileID: 1105454610}
   SE_Ka: {fileID: 8300000, guid: 159c6739db15c1b4ab4e796431bc3f32, type: 3}
   SE_Kiran: {fileID: 8300000, guid: cf3064c69888c0e41b6e9aa42dfc3819, type: 3}
   SE_Dodon: {fileID: 8300000, guid: 0bbc379954259bb46ad7d82e87c1ccc6, type: 3}
@@ -736,6 +737,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1105454610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5600524316262956135, guid: 5d6c9666572eede4c92eb6e6ab782e34,
+    type: 3}
+  m_PrefabInstance: {fileID: 1475883327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1136849281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,6 +1377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014379543524515891, guid: 5d6c9666572eede4c92eb6e6ab782e34,
+        type: 3}
+      propertyPath: m_name
+      value: Fire1
       objectReference: {fileID: 0}
     - target: {fileID: 8001576405822521053, guid: 5d6c9666572eede4c92eb6e6ab782e34,
         type: 3}

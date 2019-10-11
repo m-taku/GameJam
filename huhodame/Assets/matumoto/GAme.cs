@@ -17,18 +17,17 @@ public class GAme : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_name!="NULL")
+        if (furag)
         {
-            if (Input.GetButton(m_name))
+            if (m_name != "NULL")
             {
-                obj.GetComponent<ChangeScenes>().Change();
+                if (Input.GetButton(m_name))
+                {
+                    obj.GetComponent<ChangeScenes>().Change();
+                }
             }
-        }
-        else
-        {
-            if(furag)
+            else
             {
-
                 obj.GetComponent<ChangeScenes>().Change();
             }
         }

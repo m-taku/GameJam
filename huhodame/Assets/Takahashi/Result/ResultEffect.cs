@@ -50,6 +50,7 @@ public class ResultEffect : MonoBehaviour
     GameObject Line = null; //ライン
     GameObject Score = null;
     GameObject Score2 = null;
+    [SerializeField] GameObject GameManager = null;
 
     //効果音設定
     private AudioSource audioSource;
@@ -436,7 +437,7 @@ public class ResultEffect : MonoBehaviour
                 Score2.GetComponent<Text>().color = sp_color;
 
                 Gun.transform.Rotate(new Vector3(0, 0, -10.0f / 10.0f));
-
+                GameManager.GetComponent<GAme>().furag = true;
             }
         }
 
