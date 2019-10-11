@@ -48,7 +48,7 @@ public class CamerMove : MonoBehaviour
         if (countevil < ScoreManager.getdeath_evilHuman())
         {
             countevil++;
-            dollar += 1000 ;
+            dollar += 1000;
             dollarText.text = dollar.ToString() + "＄";
         }
         if (count < ScoreManager.getdeath_normalHuman())

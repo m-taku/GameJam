@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Human : MonoBehaviour
 {
-    [SerializeField] float speed = 20.0f;
+    public float speed = 20.0f;
     bool m_evil = false;
     bool m_ded = true;
     bool m_sensor = true;

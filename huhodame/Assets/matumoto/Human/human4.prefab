@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a101be7b86c6cc4eaec1f5d70e71b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 30
   m_Material: {fileID: 2100000, guid: 972e905342cab6346877b6468f5d8477, type: 2}
   m_obj: {fileID: 6743651104585967851}
   p_Sprite: {fileID: 21300000, guid: e7fd5ab0eb490b9488b355fc9735a1ad, type: 3}

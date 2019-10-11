@@ -40,15 +40,20 @@ public class SpoonHuman : MonoBehaviour
                     }
                     break;
                 case GameTime.day.Noon:
-                    if (count % 2 == 0)
-                    {
-                        obj = Spoon();
-                    }
-                    evilratio = 20;
+                    obj = Spoon();
+                    evilratio = 40;
                     break;
                 case GameTime.day.Night:
-                    obj = Spoon();
-                    evilratio = 100;
+                    if ((m_Time.m_GameTime / 1) >= 70)
+                    {
+                        for (int i = 0; i < 3; i++)
+                        {
+                            obj = Spoon();
+                            evilratio = 0;
+                            obj.speed = 40;
+                            obj.setevil(true);
+                        }
+                    }
                     break;
             }
             if (evilratio >= Random.Range(0, 100))

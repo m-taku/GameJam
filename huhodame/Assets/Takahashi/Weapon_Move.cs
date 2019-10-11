@@ -93,32 +93,32 @@ public class Weapon_Move : MonoBehaviour
                     Weapon2_nedan.GetComponent<Text>().color = TextColor_g;
                     Weapon3_nedan.GetComponent<Text>().color = TextColor_g;
                     //pos
-                    Pos = Weapon1.transform.position;
-                    Pos.y = 520.0f;
-                    Weapon1.transform.position = Pos;
-                    Pos = Weapon2.transform.position;
-                    Pos.y = 530.0f;
-                    Weapon2.transform.position = Pos;
-                    Pos = Weapon3.transform.position;
-                    Pos.y = 530.0f;
-                    Weapon3.transform.position = Pos;
+                    //Weapon1.transform.GetComponent<Image>().enabled = true ;
+                    //Pos.y = 520.0f;
+                    //Weapon1.transform.position = Pos;
+                    //Pos = Weapon2.transform.position;
+                    //Pos.y = 530.0f;
+                    //Weapon2.transform.position = Pos;
+                    //Pos = Weapon3.transform.position;
+                    //Pos.y = 530.0f;
+                    //Weapon3.transform.position = Pos;
 
-                    Pos = Batu1.transform.position;
-                    Pos.y = 180.0f + 330.0f;
-                    Batu1.transform.position = Pos;
-                    Pos = Batu2.transform.position;
-                    Pos.y = 180.0f + 330.0f;
-                    Batu2.transform.position = Pos;
+                    //Pos = Batu1.transform.position;
+                    //Pos.y = 180.0f + 330.0f;
+                    //Batu1.transform.position = Pos;
+                    //Pos = Batu2.transform.position;
+                    //Pos.y = 180.0f + 330.0f;
+                    //Batu2.transform.position = Pos;
 
-                    Pos = Weapon1_nedan.transform.position;
-                    Pos.y = 140.0f + 330.0f;
-                    Weapon1_nedan.transform.position = Pos;
-                    Pos = Weapon2_nedan.transform.position;
-                    Pos.y = 150.0f + 330.0f;
-                    Weapon2_nedan.transform.position = Pos;
-                    Pos = Weapon3_nedan.transform.position;
-                    Pos.y = 150.0f + 330.0f;
-                    Weapon3_nedan.transform.position = Pos;
+                    //Pos = Weapon1_nedan.transform.position;
+                    //Pos.y = 140.0f + 330.0f;
+                    //Weapon1_nedan.transform.position = Pos;
+                    //Pos = Weapon2_nedan.transform.position;
+                    //Pos.y = 150.0f + 330.0f;
+                    //Weapon2_nedan.transform.position = Pos;
+                    //Pos = Weapon3_nedan.transform.position;
+                    //Pos.y = 150.0f + 330.0f;
+                    //Weapon3_nedan.transform.position = Pos;
 
                     break;
                 case 2:
@@ -132,32 +132,32 @@ public class Weapon_Move : MonoBehaviour
                     Weapon1_nedan.GetComponent<Text>().color = TextColor_g;
                     Weapon3_nedan.GetComponent<Text>().color = TextColor_g;
                     //pos
-                    Pos = Weapon2.transform.position;
-                    Pos.y = 520.0f;
-                    Weapon2.transform.position = Pos;
-                    Pos = Weapon1.transform.position;
-                    Pos.y = 530.0f;
-                    Weapon1.transform.position = Pos;
-                    Pos = Weapon3.transform.position;
-                    Pos.y = 530.0f;
-                    Weapon3.transform.position = Pos;
+                    //Pos = Weapon2.transform.position;
+                    //Pos.y = 520.0f;
+                    //Weapon2.transform.position = Pos;
+                    //Pos = Weapon1.transform.position;
+                    //Pos.y = 530.0f;
+                    //Weapon1.transform.position = Pos;
+                    //Pos = Weapon3.transform.position;
+                    //Pos.y = 530.0f;
+                    //Weapon3.transform.position = Pos;
 
-                    Pos = Batu1.transform.position;
-                    Pos.y = 170.0f + 330.0f;
-                    Batu1.transform.position = Pos;
-                    Pos = Batu2.transform.position;
-                    Pos.y = 180.0f + 330.0f;
-                    Batu2.transform.position = Pos;
+                    //Pos = Batu1.transform.position;
+                    //Pos.y = 170.0f + 330.0f;
+                    //Batu1.transform.position = Pos;
+                    //Pos = Batu2.transform.position;
+                    //Pos.y = 180.0f + 330.0f;
+                    //Batu2.transform.position = Pos;
 
-                    Pos = Weapon2_nedan.transform.position;
-                    Pos.y = 140.0f + 330.0f;
-                    Weapon2_nedan.transform.position = Pos;
-                    Pos = Weapon1_nedan.transform.position;
-                    Pos.y = 150.0f + 330.0f;
-                    Weapon1_nedan.transform.position = Pos;
-                    Pos = Weapon3_nedan.transform.position;
-                    Pos.y = 150.0f + 330.0f;
-                    Weapon3_nedan.transform.position = Pos;
+                    //Pos = Weapon2_nedan.transform.position;
+                    //Pos.y = 140.0f + 330.0f;
+                    //Weapon2_nedan.transform.position = Pos;
+                    //Pos = Weapon1_nedan.transform.position;
+                    //Pos.y = 150.0f + 330.0f;
+                    //Weapon1_nedan.transform.position = Pos;
+                    //Pos = Weapon3_nedan.transform.position;
+                    //Pos.y = 150.0f + 330.0f;
+                    //Weapon3_nedan.transform.position = Pos;
 
                     break;
                 case 1:
@@ -171,32 +171,32 @@ public class Weapon_Move : MonoBehaviour
                     Weapon1_nedan.GetComponent<Text>().color = TextColor_g;
                     Weapon2_nedan.GetComponent<Text>().color = TextColor_g;
                     //pos
-                    Pos = Weapon3.transform.position;
-                    Pos.y = 520.0f;
-                    Weapon3.transform.position = Pos;
-                    Pos = Weapon1.transform.position;
-                    Pos.y = 530.0f;
-                    Weapon1.transform.position = Pos;
-                    Pos = Weapon2.transform.position;
-                    Pos.y = 530.0f;
-                    Weapon2.transform.position = Pos;
+                    //Pos = Weapon3.transform.position;
+                    //Pos.y = 520.0f;
+                    //Weapon3.transform.position = Pos;
+                    //Pos = Weapon1.transform.position;
+                    //Pos.y = 530.0f;
+                    //Weapon1.transform.position = Pos;
+                    //Pos = Weapon2.transform.position;
+                    //Pos.y = 530.0f;
+                    //Weapon2.transform.position = Pos;
 
-                    Pos = Batu2.transform.position;
-                    Pos.y = 170.0f + 330.0f;
-                    Batu2.transform.position = Pos;
-                    Pos = Batu1.transform.position;
-                    Pos.y = 180.0f + 330.0f;
-                    Batu1.transform.position = Pos;
+                    //Pos = Batu2.transform.position;
+                    //Pos.y = 170.0f + 330.0f;
+                    //Batu2.transform.position = Pos;
+                    //Pos = Batu1.transform.position;
+                    //Pos.y = 180.0f + 330.0f;
+                    //Batu1.transform.position = Pos;
 
-                    Pos = Weapon3_nedan.transform.position;
-                    Pos.y = 140.0f + 330.0f;
-                    Weapon3_nedan.transform.position = Pos;
-                    Pos = Weapon1_nedan.transform.position;
-                    Pos.y = 150.0f + 330.0f;
-                    Weapon1_nedan.transform.position = Pos;
-                    Pos = Weapon2_nedan.transform.position;
-                    Pos.y = 150.0f + 330.0f;
-                    Weapon2_nedan.transform.position = Pos;
+                    //Pos = Weapon3_nedan.transform.position;
+                    //Pos.y = 140.0f + 330.0f;
+                    //Weapon3_nedan.transform.position = Pos;
+                    //Pos = Weapon1_nedan.transform.position;
+                    //Pos.y = 150.0f + 330.0f;
+                    //Weapon1_nedan.transform.position = Pos;
+                    //Pos = Weapon2_nedan.transform.position;
+                    //Pos.y = 150.0f + 330.0f;
+                    //Weapon2_nedan.transform.position = Pos;
 
                     break;
             }
