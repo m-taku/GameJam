@@ -10,20 +10,21 @@ public class TimeLight : MonoBehaviour
     GameTime.day Hoge_Day = GameTime.day.Morning;
     GameObject GameObj;
     public Material night_sky = null;
-    public AudioSource[] sound;
+   private AudioSource sound;
     public int num = 0;
     // Start is called before the first frame update
     void Start()
     {
-        sound = GetComponents<AudioSource>();
+        sound = GetComponent<AudioSource>();
         GameObj = GameObject.Find("GameObject");
+        sound.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
         timeElapsed += Time.deltaTime;
-        sound[num].Play();
+       
         if (timeElapsed >= timeOut)
         {
             // Do anything
@@ -32,9 +33,9 @@ public class TimeLight : MonoBehaviour
 
             timeElapsed = 0.0f;
         }
-
+      
     }
-
+    
     void LightMove()
     {
         Light light = this.GetComponent<Light>();
@@ -49,10 +50,10 @@ public class TimeLight : MonoBehaviour
         {
             case GameTime.day.Morning:
                 light.color = new Vector4(0.6985582f, 0.7487539f, 0.8867924f, 1.0f);
-                num = 0;
+               
                 break;
             case GameTime.day.Noon:
-                num = 1;
+               
                 if (Timer < 60)
                 {
                     //light.color = new Vector4(1.0f, 0.8649839f, 0.8649839f, 1.0f);
@@ -65,7 +66,7 @@ public class TimeLight : MonoBehaviour
 
                 break;
             case GameTime.day.Night:
-                num = 2;
+              
                 //light.color = new Vector4(0.0773407f, 0.1126049f, 0.2075472f, 1.0f);
                 if (Timer == 5)
                 {
