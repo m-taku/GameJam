@@ -16,9 +16,13 @@ public class Aim : MonoBehaviour
     private int currentNum = 0;
     private float interVal = 0;
     private AudioSource[] sound;
+    GameObject m_Camera = null;
+
     // Start is called before the first frame update
     void Start()
     {
+        m_Camera = GameObject.Find("Main Camera");
+
         //カーソルを用意したカーソルに変更
         Cursor.SetCursor(cursor, new Vector2(cursor.width / 2, cursor.height / 2), CursorMode.ForceSoftware);
        sound = GetComponents<AudioSource>();
@@ -87,10 +91,33 @@ public class Aim : MonoBehaviour
     {
         if(interVal >= 0.5f)
         {
-            sound[currentNum].Play();
-            interVal = 0.0f;
-            var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
-            bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+            if(currentNum == 0)
+            {
+                sound[currentNum].Play();
+                interVal = 0.0f;
+                var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
+                bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+            }
+            if (currentNum==2 && m_Camera.GetComponent<CamerMove>().NowMoney() >= 500)
+            {
+                m_Camera.GetComponent<CamerMove>().PlusMoney(500);
+
+                sound[currentNum].Play();
+                interVal = 0.0f;
+                var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
+                bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+
+            }
+            if (currentNum == 1 && m_Camera.GetComponent<CamerMove>().NowMoney() >= 2000)
+            {
+                m_Camera.GetComponent<CamerMove>().PlusMoney(2000);
+
+                sound[currentNum].Play();
+                interVal = 0.0f;
+                var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
+                bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+
+            }
         }
         
     }

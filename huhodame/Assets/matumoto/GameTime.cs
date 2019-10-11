@@ -26,7 +26,7 @@ public class GameTime : MonoBehaviour
     void Update()
     {
         m_GameTime += Time.deltaTime;
-        if ((m_GameTime/10)- (int)m_Day >=1)
+        if ((m_GameTime/30)- (int)m_Day >=1)
         {
             if (m_Day != day.Night)
             {

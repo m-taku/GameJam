@@ -66,6 +66,10 @@ public class CamerMove : MonoBehaviour
     {
         return dollar;
     }
+    public void PlusMoney(int money)
+    {
+        dollar -= money;
+    }
     //砲台Noを返す
     public int NowHoudai()
     {
