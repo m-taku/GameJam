@@ -15,11 +15,14 @@ public class Aim : MonoBehaviour
     private float scroll;
     private int currentNum = 0;
     private float interVal = 0;
+    private AudioSource[] sound;
     // Start is called before the first frame update
     void Start()
     {
         //カーソルを用意したカーソルに変更
         Cursor.SetCursor(cursor, new Vector2(cursor.width / 2, cursor.height / 2), CursorMode.ForceSoftware);
+       sound = GetComponents<AudioSource>();
+       
     }
 
     // Update is called once per frame
@@ -27,7 +30,6 @@ public class Aim : MonoBehaviour
     {
         interVal += Time.deltaTime;
         scroll = Input.GetAxis("Mouse ScrollWheel");
-        
         if (scroll > 0)
         {
             
@@ -85,6 +87,7 @@ public class Aim : MonoBehaviour
     {
         if(interVal >= 0.5f)
         {
+            sound[currentNum].Play();
             interVal = 0.0f;
             var bulletInstance = Instantiate<GameObject>(bullet[currentNum], muzzle.position, muzzle.rotation);
             bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
