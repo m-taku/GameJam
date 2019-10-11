@@ -17,6 +17,7 @@ public class Weapon_Move : MonoBehaviour
     GameObject Weapon1_nedan = null;
     GameObject Weapon2_nedan = null;
     GameObject Weapon3_nedan = null;
+    int Bf_WeaponNom = -1;
 
     //テキストの色
     Vector4 TextColor = new Vector4(0.8490566f, 0.5218349f, 0.03604484f, 1.0f);
@@ -76,126 +77,130 @@ public class Weapon_Move : MonoBehaviour
         //選択状態
         int NowWeaponNom = Spot.GetComponent<Aim>().GetCurrentNum();
         Debug.Log(NowWeaponNom);
-
-        switch (NowWeaponNom)
+        if(NowWeaponNom!= Bf_WeaponNom)
         {
-            case 0:
-                //color
-                sp_color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
-                Weapon1.GetComponent<Image>().color = sp_color;
-                sp_color = new Vector4(0.5f, 0.5f, 0.5f, 1.0f);
-                Weapon2.GetComponent<Image>().color = sp_color;
-                Weapon3.GetComponent<Image>().color = sp_color;
-                Weapon1_nedan.GetComponent<Text>().color = TextColor;
-                Weapon2_nedan.GetComponent<Text>().color = TextColor_g;
-                Weapon3_nedan.GetComponent<Text>().color = TextColor_g;
-                //pos
-                Pos = Weapon1.transform.position;
-                Pos.y = 520.0f;
-                Weapon1.transform.position = Pos;
-                Pos = Weapon2.transform.position;
-                Pos.y = 530.0f;
-                Weapon2.transform.position = Pos;
-                Pos = Weapon3.transform.position;
-                Pos.y = 530.0f;
-                Weapon3.transform.position = Pos;
+            Bf_WeaponNom = NowWeaponNom;
+            switch (NowWeaponNom)
+            {
+                case 0:
+                    //color
+                    sp_color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+                    Weapon1.GetComponent<Image>().color = sp_color;
+                    sp_color = new Vector4(0.5f, 0.5f, 0.5f, 1.0f);
+                    Weapon2.GetComponent<Image>().color = sp_color;
+                    Weapon3.GetComponent<Image>().color = sp_color;
+                    Weapon1_nedan.GetComponent<Text>().color = TextColor;
+                    Weapon2_nedan.GetComponent<Text>().color = TextColor_g;
+                    Weapon3_nedan.GetComponent<Text>().color = TextColor_g;
+                    //pos
+                    Pos = Weapon1.transform.position;
+                    Pos.y = 520.0f;
+                    Weapon1.transform.position = Pos;
+                    Pos = Weapon2.transform.position;
+                    Pos.y = 530.0f;
+                    Weapon2.transform.position = Pos;
+                    Pos = Weapon3.transform.position;
+                    Pos.y = 530.0f;
+                    Weapon3.transform.position = Pos;
 
-                Pos = Batu1.transform.position;
-                Pos.y = 180.0f + 330.0f;
-                Batu1.transform.position = Pos;
-                Pos = Batu2.transform.position;
-                Pos.y = 180.0f + 330.0f;
-                Batu2.transform.position = Pos;
+                    Pos = Batu1.transform.position;
+                    Pos.y = 180.0f + 330.0f;
+                    Batu1.transform.position = Pos;
+                    Pos = Batu2.transform.position;
+                    Pos.y = 180.0f + 330.0f;
+                    Batu2.transform.position = Pos;
 
-                Pos = Weapon1_nedan.transform.position;
-                Pos.y = 140.0f + 330.0f;
-                Weapon1_nedan.transform.position = Pos;
-                Pos = Weapon2_nedan.transform.position;
-                Pos.y = 150.0f + 330.0f;
-                Weapon2_nedan.transform.position = Pos;
-                Pos = Weapon3_nedan.transform.position;
-                Pos.y = 150.0f + 330.0f;
-                Weapon3_nedan.transform.position = Pos;
+                    Pos = Weapon1_nedan.transform.position;
+                    Pos.y = 140.0f + 330.0f;
+                    Weapon1_nedan.transform.position = Pos;
+                    Pos = Weapon2_nedan.transform.position;
+                    Pos.y = 150.0f + 330.0f;
+                    Weapon2_nedan.transform.position = Pos;
+                    Pos = Weapon3_nedan.transform.position;
+                    Pos.y = 150.0f + 330.0f;
+                    Weapon3_nedan.transform.position = Pos;
 
-                break;
-            case 2:
-                //color
-                sp_color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
-                Weapon2.GetComponent<Image>().color = sp_color;
-                sp_color = new Vector4(0.5f, 0.5f, 0.5f, 1.0f);
-                Weapon1.GetComponent<Image>().color = sp_color;
-                Weapon3.GetComponent<Image>().color = sp_color;
-                Weapon2_nedan.GetComponent<Text>().color = TextColor;
-                Weapon1_nedan.GetComponent<Text>().color = TextColor_g;
-                Weapon3_nedan.GetComponent<Text>().color = TextColor_g;
-                //pos
-                Pos = Weapon2.transform.position;
-                Pos.y = 520.0f;
-                Weapon2.transform.position = Pos;
-                Pos = Weapon1.transform.position;
-                Pos.y = 530.0f;
-                Weapon1.transform.position = Pos;
-                Pos = Weapon3.transform.position;
-                Pos.y = 530.0f;
-                Weapon3.transform.position = Pos;
+                    break;
+                case 2:
+                    //color
+                    sp_color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+                    Weapon2.GetComponent<Image>().color = sp_color;
+                    sp_color = new Vector4(0.5f, 0.5f, 0.5f, 1.0f);
+                    Weapon1.GetComponent<Image>().color = sp_color;
+                    Weapon3.GetComponent<Image>().color = sp_color;
+                    Weapon2_nedan.GetComponent<Text>().color = TextColor;
+                    Weapon1_nedan.GetComponent<Text>().color = TextColor_g;
+                    Weapon3_nedan.GetComponent<Text>().color = TextColor_g;
+                    //pos
+                    Pos = Weapon2.transform.position;
+                    Pos.y = 520.0f;
+                    Weapon2.transform.position = Pos;
+                    Pos = Weapon1.transform.position;
+                    Pos.y = 530.0f;
+                    Weapon1.transform.position = Pos;
+                    Pos = Weapon3.transform.position;
+                    Pos.y = 530.0f;
+                    Weapon3.transform.position = Pos;
 
-                Pos = Batu1.transform.position;
-                Pos.y = 170.0f + 330.0f;
-                Batu1.transform.position = Pos;
-                Pos = Batu2.transform.position;
-                Pos.y = 180.0f + 330.0f;
-                Batu2.transform.position = Pos;
+                    Pos = Batu1.transform.position;
+                    Pos.y = 170.0f + 330.0f;
+                    Batu1.transform.position = Pos;
+                    Pos = Batu2.transform.position;
+                    Pos.y = 180.0f + 330.0f;
+                    Batu2.transform.position = Pos;
 
-                Pos = Weapon2_nedan.transform.position;
-                Pos.y = 140.0f + 330.0f;
-                Weapon2_nedan.transform.position = Pos;
-                Pos = Weapon1_nedan.transform.position;
-                Pos.y = 150.0f + 330.0f;
-                Weapon1_nedan.transform.position = Pos;
-                Pos = Weapon3_nedan.transform.position;
-                Pos.y = 150.0f + 330.0f;
-                Weapon3_nedan.transform.position = Pos;
+                    Pos = Weapon2_nedan.transform.position;
+                    Pos.y = 140.0f + 330.0f;
+                    Weapon2_nedan.transform.position = Pos;
+                    Pos = Weapon1_nedan.transform.position;
+                    Pos.y = 150.0f + 330.0f;
+                    Weapon1_nedan.transform.position = Pos;
+                    Pos = Weapon3_nedan.transform.position;
+                    Pos.y = 150.0f + 330.0f;
+                    Weapon3_nedan.transform.position = Pos;
 
-                break;
-            case 1:
-                //color
-                sp_color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
-                Weapon3.GetComponent<Image>().color = sp_color;
-                sp_color = new Vector4(0.5f, 0.5f, 0.5f, 1.0f);
-                Weapon1.GetComponent<Image>().color = sp_color;
-                Weapon2.GetComponent<Image>().color = sp_color;
-                Weapon3_nedan.GetComponent<Text>().color = TextColor;
-                Weapon1_nedan.GetComponent<Text>().color = TextColor_g;
-                Weapon2_nedan.GetComponent<Text>().color = TextColor_g;
-                //pos
-                Pos = Weapon3.transform.position;
-                Pos.y = 520.0f;
-                Weapon3.transform.position = Pos;
-                Pos = Weapon1.transform.position;
-                Pos.y = 530.0f;
-                Weapon1.transform.position = Pos;
-                Pos = Weapon2.transform.position;
-                Pos.y = 530.0f;
-                Weapon2.transform.position = Pos;
+                    break;
+                case 1:
+                    //color
+                    sp_color = new Vector4(1.0f, 1.0f, 1.0f, 1.0f);
+                    Weapon3.GetComponent<Image>().color = sp_color;
+                    sp_color = new Vector4(0.5f, 0.5f, 0.5f, 1.0f);
+                    Weapon1.GetComponent<Image>().color = sp_color;
+                    Weapon2.GetComponent<Image>().color = sp_color;
+                    Weapon3_nedan.GetComponent<Text>().color = TextColor;
+                    Weapon1_nedan.GetComponent<Text>().color = TextColor_g;
+                    Weapon2_nedan.GetComponent<Text>().color = TextColor_g;
+                    //pos
+                    Pos = Weapon3.transform.position;
+                    Pos.y = 520.0f;
+                    Weapon3.transform.position = Pos;
+                    Pos = Weapon1.transform.position;
+                    Pos.y = 530.0f;
+                    Weapon1.transform.position = Pos;
+                    Pos = Weapon2.transform.position;
+                    Pos.y = 530.0f;
+                    Weapon2.transform.position = Pos;
 
-                Pos = Batu2.transform.position;
-                Pos.y = 170.0f + 330.0f;
-                Batu2.transform.position = Pos;
-                Pos = Batu1.transform.position;
-                Pos.y = 180.0f + 330.0f;
-                Batu1.transform.position = Pos;
+                    Pos = Batu2.transform.position;
+                    Pos.y = 170.0f + 330.0f;
+                    Batu2.transform.position = Pos;
+                    Pos = Batu1.transform.position;
+                    Pos.y = 180.0f + 330.0f;
+                    Batu1.transform.position = Pos;
 
-                Pos = Weapon3_nedan.transform.position;
-                Pos.y = 140.0f + 330.0f;
-                Weapon3_nedan.transform.position = Pos;
-                Pos = Weapon1_nedan.transform.position;
-                Pos.y = 150.0f + 330.0f;
-                Weapon1_nedan.transform.position = Pos;
-                Pos = Weapon2_nedan.transform.position;
-                Pos.y = 150.0f + 330.0f;
-                Weapon2_nedan.transform.position = Pos;
+                    Pos = Weapon3_nedan.transform.position;
+                    Pos.y = 140.0f + 330.0f;
+                    Weapon3_nedan.transform.position = Pos;
+                    Pos = Weapon1_nedan.transform.position;
+                    Pos.y = 150.0f + 330.0f;
+                    Weapon1_nedan.transform.position = Pos;
+                    Pos = Weapon2_nedan.transform.position;
+                    Pos.y = 150.0f + 330.0f;
+                    Weapon2_nedan.transform.position = Pos;
 
-                break;
+                    break;
+            }
+
         }
 
     }
