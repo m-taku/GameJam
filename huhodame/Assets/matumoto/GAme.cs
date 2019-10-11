@@ -5,7 +5,7 @@ using UnityEngine;
 public class GAme : MonoBehaviour
 {
     [SerializeField] GameObject obj = null;
-    [SerializeField] string m_name;
+    [SerializeField] string m_name = null;
     public bool furag = false;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class GAme : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_name != null)
+        if (m_name!="NULL")
         {
             if (Input.GetButton(m_name))
             {
