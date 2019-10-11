@@ -5,15 +5,20 @@ using UnityEngine.UI;
 
 public class Sensor : MonoBehaviour
 {
-    [SerializeField] GameObject[] m_Imageobj = new GameObject[2];
+    [SerializeField] GameObject[] m_Imageobj = new GameObject[3];
     [SerializeField] KeyCode m_key;
-    Image[] m_Image = new Image[2];
+    Image[] m_Image = new Image[3];
     GameObject m_Human;
     Human m_human = null;
     public Sprite[] sprite;
+    private GameObject A_Check = null;
+    private GameObject B_Check = null;
+    public Sprite NoCheckSprite;
+    public Sprite CheckSprite;
+
     private void Start()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             m_Image[i] = m_Imageobj[i].GetComponent<Image>();
         }
@@ -31,6 +36,7 @@ public class Sensor : MonoBehaviour
 
                 m_Image[0].sprite = sprite[(int)m_human.motimono];
                 m_Image[1].sprite = m_human.p_Sprite;
+                m_Image[2].sprite = NoCheckSprite;
                 m_human.setsensor(true);
             }
         }
@@ -55,6 +61,7 @@ public class Sensor : MonoBehaviour
             if (m_human != null)
             {
                 m_Human.GetComponent<Renderer>().material = m_human.getmaterial();
+                m_Image[2].sprite = CheckSprite;
             }
         }
         //Press space to change the Sprite of the Image
