@@ -26,7 +26,7 @@ public class Weapon_Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Spot = GameObject.Find("cannon_2_p");
+        Spot = GameObject.Find("cannon_2_p (1)");
         Camera = GameObject.Find("Main Camera");
 
         Weapon1 = GameObject.Find("Weapon1");
