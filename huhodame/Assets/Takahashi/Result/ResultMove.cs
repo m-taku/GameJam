@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//リザルト文字のアレ
+//リザルト文字のアレ（いらなかったが）
 public class ResultMove : MonoBehaviour
 {
     // Start is called before the first frame update

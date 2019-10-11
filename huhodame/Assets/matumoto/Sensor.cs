@@ -30,14 +30,14 @@ public class Sensor : MonoBehaviour
         {
             m_human = t.gameObject.GetComponent<Human>();
             m_Human = m_human.getobj();
-            if (m_human.getsensor() ==false)
+            if (m_human.getsensor())
             {
                 Debug.Log("発見！！！");
 
                 m_Image[0].sprite = sprite[(int)m_human.motimono];
                 m_Image[1].sprite = m_human.p_Sprite;
                 m_Image[2].sprite = NoCheckSprite;
-                m_human.setsensor(true);
+                m_human.setsensor(false);
             }
         }
     }
@@ -67,6 +67,12 @@ public class Sensor : MonoBehaviour
         //Press space to change the Sprite of the Image
     }
 
-
-
+    public KeyCode GetKeyCode()
+    {
+        return m_key;
+    }
+    public void SetKeyCode(KeyCode key)
+    {
+        m_key = key;
+    }
 }
