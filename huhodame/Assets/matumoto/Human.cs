@@ -5,11 +5,14 @@ public class Human : MonoBehaviour
 {
     [SerializeField] float speed = 20.0f;
     bool m_evil = false;
-    bool m_sensor = false;
-    [SerializeField] Material m_Material;
-    [SerializeField] GameObject m_obj;
+    bool m_ded = true;
+    bool m_sensor = true;
+    [SerializeField] Material m_Material = null;
+    [SerializeField] GameObject m_obj = null;
     CharacterController m_CharCon;
+    private Animator animator;
     public Sprite p_Sprite;
+    Vector3 m_moveSpeed = Vector3.zero;
     public enum MyNo
     {
         dummy_sensor,
@@ -48,6 +51,7 @@ public class Human : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         m_CharCon = this.GetComponent<CharacterController>();
         int m = (int)MyNo.frying_pan;
         motimono = (MyNo)Random.Range(0, m);
@@ -56,6 +60,8 @@ public class Human : MonoBehaviour
             motimono = MyNo.knife;
             Debug.Log("nuiaefhw");
         }
+        m_moveSpeed = transform.forward;
+        m_moveSpeed.y -= 0.5f;
         m_CharCon = this.GetComponent<CharacterController>();
         
     }
@@ -63,9 +69,19 @@ public class Human : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var moveSpeed = transform.forward;
-        moveSpeed.y -= 0.5f;
-        m_CharCon.Move(moveSpeed * speed * Time.deltaTime);
+
+        if (m_moveSpeed.y >= -10.0f)
+        {
+            m_moveSpeed.y -= 0.5f;
+        }
+        if(!m_ded)
+        {
+            if(m_CharCon.isGrounded)
+            {
+                speed = 0.0f;
+            }
+        }
+        m_CharCon.Move(m_moveSpeed * speed * Time.deltaTime);
     }
     void OnTriggerEnter(Collider t)
     {
@@ -74,12 +90,26 @@ public class Human : MonoBehaviour
         {
             //ここでスコアを減算する
             ScoreManager.Escape(m_evil);
-            Destroy(this.transform.gameObject);   
-        }
-        if(t.gameObject.tag == "Bullet")
-        {
-            ScoreManager.AddScore(m_evil);
             Destroy(this.transform.gameObject);
         }
+        if (t.gameObject.tag == "Bullet")
+        {
+            if (m_ded)
+            {
+                Debug.Log("死ぬーーー");
+                ScoreManager.AddScore(m_evil);
+                m_moveSpeed = this.transform.position - t.transform.position;
+                m_moveSpeed.y += 200.0f;
+                m_moveSpeed = m_moveSpeed.normalized;
+                m_moveSpeed *= 10.0f;
+                animator.SetTrigger("IsDead");
+                m_CharCon.Move(m_moveSpeed * speed * Time.deltaTime);
+                m_ded = false;
+            }
+        }
+    }
+    void daed()
+    {
+        Destroy(this.transform.gameObject);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GAme : MonoBehaviour
 {
-    [SerializeField] GameObject obj;
+    [SerializeField] GameObject obj = null;
 
     // Start is called before the first frame update
     void Start()

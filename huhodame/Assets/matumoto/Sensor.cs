@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Sensor : MonoBehaviour
 {
     [SerializeField] GameObject[] m_Imageobj = new GameObject[2];
-    [SerializeField] KeyCode m_key;
+    [SerializeField] KeyCode m_key = KeyCode.D;
     Image[] m_Image = new Image[2];
     GameObject m_Human;
     Human m_human = null;
@@ -17,6 +17,7 @@ public class Sensor : MonoBehaviour
         {
             m_Image[i] = m_Imageobj[i].GetComponent<Image>();
         }
+        m_key = KeyCode.D;
     }
     void OnTriggerEnter(Collider t)
     {
@@ -25,13 +26,13 @@ public class Sensor : MonoBehaviour
         {
             m_human = t.gameObject.GetComponent<Human>();
             m_Human = m_human.getobj();
-            if (m_human.getsensor() ==false)
+            if (m_human.getsensor())
             {
                 Debug.Log("発見！！！");
 
                 m_Image[0].sprite = sprite[(int)m_human.motimono];
                 m_Image[1].sprite = m_human.p_Sprite;
-                m_human.setsensor(true);
+                m_human.setsensor(false);
             }
         }
     }
