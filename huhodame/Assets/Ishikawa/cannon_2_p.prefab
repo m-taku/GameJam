@@ -99,10 +99,6 @@ MonoBehaviour:
   - {fileID: 115386, guid: 1d37014fd411c524db3696bba6ff1d21, type: 3}
   - {fileID: 7090516802065617900, guid: b1120f4fee3275a4281d6253eb9fe1aa, type: 3}
   muzzle: {fileID: 726772912233655588}
-  sound:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!82 &82043030027385132
 AudioSource:
   m_ObjectHideFlags: 0

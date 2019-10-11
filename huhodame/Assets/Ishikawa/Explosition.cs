@@ -6,11 +6,10 @@ public class Explosition : MonoBehaviour
 {
     [SerializeField]
     private GameObject explosion;
-    private AudioSource sound;
+   
     // Start is called before the first frame update
     void Start()
     {
-        sound = GetComponent<AudioSource>();
 
     }
 
@@ -21,7 +20,7 @@ public class Explosition : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {
-        sound.Play();
+       
         // Debug.Log("fghnfger");
         Instantiate(explosion, new Vector3(transform.position.x,
             transform.position.y,
