@@ -13,6 +13,14 @@ public class SpoonHuman : MonoBehaviour
     void Start()
     {
         m_Time = Score.GetComponent<GameTime>();
+        for(int i= 0;i<2;i++)
+        {
+            var na = Spoon();
+            if (i > 1)
+            {
+                na.setevil(true);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -32,15 +40,15 @@ public class SpoonHuman : MonoBehaviour
                     }
                     break;
                 case GameTime.day.Noon:
-                    obj = Spoon();
+                    if (count % 2 == 0)
+                    {
+                        obj = Spoon();
+                    }
                     evilratio = 20;
                     break;
                 case GameTime.day.Night:
-                    if (count % 3 == 0)
-                    {
-                        obj = Spoon();
-                        evilratio = 90;
-                    }
+                    obj = Spoon();
+                    evilratio = 100;
                     break;
             }
             if (evilratio >= Random.Range(0, 100))
@@ -53,8 +61,9 @@ public class SpoonHuman : MonoBehaviour
     Human Spoon()
     {
         var na = Random.Range(0, Human.Length);
-        var sa = Random.Range(-250, 250);
-        var pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + sa);
+        var z_sa = Random.Range(-200, 200);
+        var x_sa = Random.Range(-10, 10);
+        var pos = new Vector3(transform.position.x+ x_sa, transform.position.y, transform.position.z + z_sa);
         var n = Instantiate(Human[na], pos, transform.rotation);
         return n.GetComponent<Human>();
         //if (20 >= Random.Range(0, 100))

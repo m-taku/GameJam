@@ -28,12 +28,12 @@ public class Sensor : MonoBehaviour
 
         if (t.gameObject.tag == "Player")
         {
-            m_human = t.gameObject.GetComponent<Human>();
-            m_Human = m_human.getobj();
-            if (m_human.getsensor())
+            var n = t.gameObject.GetComponent<Human>();
+            if (n.getsensor())
             {
                 Debug.Log("発見！！！");
-
+                m_human = n;
+                m_Human = m_human.getobj();
                 m_Image[0].sprite = sprite[(int)m_human.motimono];
                 m_Image[1].sprite = m_human.p_Sprite;
                 m_Image[2].sprite = NoCheckSprite;
@@ -58,9 +58,10 @@ public class Sensor : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(m_key)){
-            if (m_human != null)
+            if (m_Human != null)
             {
                 m_Human.GetComponent<Renderer>().material = m_human.getmaterial();
+                m_Human = null;
                 m_Image[2].sprite = CheckSprite;
             }
         }
