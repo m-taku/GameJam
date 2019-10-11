@@ -9,6 +9,7 @@ public class TimeLight : MonoBehaviour
     int Timer = 0;
     GameTime.day Hoge_Day = GameTime.day.Morning;
     GameObject GameObj;
+    public Material night_sky = null;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,10 @@ public class TimeLight : MonoBehaviour
                 break;
             case GameTime.day.Night:
                 //light.color = new Vector4(0.0773407f, 0.1126049f, 0.2075472f, 1.0f);
+                if (Timer == 5)
+                {
+                    RenderSettings.skybox = night_sky;
+                }
 
                 if (Timer < 60)
                 {
